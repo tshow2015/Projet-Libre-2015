@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tshow">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SET_DEBUG_APP"></uses-permission>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:screenOrientation="portrait"
+        android:theme="@style/Theme.App" >
+        <meta-data
+            android:name="com.google.android.gms.games.APP_ID"
+            android:value="@string/app_id" />
+
+        <meta-data android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="com.tshow.cardgameengine.activity.SplashActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tshow.cardgameengine.activity.ChooseGameActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.tshow.cardgameengine.activity.InstructionsActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.tshow.cardgameengine.activity.SingleActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.tshow.cardgames.american8.American8Activity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+        android:name="com.tshow.cardgames.american8.American8OffActivity"
+        android:label="@string/app_name" >
+    </activity>
+        <activity
+            android:name="com.tshow.cardgames.djambo.DjamboActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.tshow.cardgames.djambo.DjamboOffActivity"
+            android:label="@string/app_name" >
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,132 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/bg_menu"
+    android:layout_height="wrap_content" >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:id="@+id/game_menu"
+        android:visibility="visible"
+        android:layout_marginTop="100dp">
+
+
+        <Button
+            android:id="@+id/multiplayer_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onMultiplayerClicked"
+            style="@style/ButtonText"
+            android:background="@drawable/btn_black_glossy"
+            android:text="@string/multiplayer" />
+
+        <Button
+            android:id="@+id/singleplayer_button"
+            android:onClick="onSingleClicked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/ButtonText"
+            android:background="@drawable/btn_black_glossy"
+            android:text="@string/singleplayer"
+            android:layout_margin="30dp" />
+
+
+        <Button
+            android:id="@+id/instructions_button"
+            android:onClick="onInstructionsClicked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/ButtonText"
+            android:background="@drawable/btn_black_glossy"
+            android:text="@string/instructions" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/matchup_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_marginTop="100dp">
+
+        <TextView
+            android:id="@+id/name_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/margin_small"
+            android:text=""
+            android:textAppearance="@style/HelpText.Caption" />
+
+        <Button
+            android:id="@+id/sign_out_button"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            style="@style/ButtonText"
+            android:textColor="#000000"
+            android:background="@drawable/btn_white_glossy"
+            android:text="@string/sign_out" />
+
+        <Button
+            android:id="@+id/startMatchButton"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:onClick="onStartMatchClicked"
+            style="@style/ButtonText"
+            android:textColor="#000000"
+            android:background="@drawable/btn_white_glossy"
+            android:text="@string/start_match"
+             />
+
+        <Button
+            android:id="@+id/checkGamesButton"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:onClick="onCheckGamesClicked"
+            style="@style/ButtonText"
+            android:textColor="#000000"
+            android:background="@drawable/btn_white_glossy"
+            android:text="@string/check_games"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:id="@+id/sign_in_page"
+        android:layout_centerInParent="true">
+
+
+        <!-- sign-in button -->
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/sign_in_button"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content">
+        </com.google.android.gms.common.SignInButton>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/progressLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#AAAAAAAA"
+        android:visibility="gone" >
+
+        <ProgressBar
+            android:id="@+id/progress_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+</RelativeLayout>

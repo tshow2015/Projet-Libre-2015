@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/gameplay_layout"
+        android:background="@drawable/bg_djambo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:layout_below="@+id/login_layout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <ScrollView
+            android:id="@+id/infoScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/infoscreen"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/infoLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/gameInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/game_info"
+                    android:textColor="#FFFFFF"
+
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+            </LinearLayout>
+        </ScrollView>
+
+        <ScrollView
+            android:id="@+id/tableScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@+id/infoScrollView"
+            android:layout_above="@+id/handScrollView1"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+            <LinearLayout
+                android:id="@+id/tableLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            </LinearLayout>
+        </ScrollView>
+
+        <!--
+        <HorizontalScrollView
+            android:id="@+id/handScrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="130dp">
+
+            <LinearLayout
+                android:id="@+id/handLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal">
+            </LinearLayout>
+        </HorizontalScrollView>
+        <HorizontalScrollView
+            android:id="@+id/handScrollView3"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="250dp"
+            android:fillViewport="false">
+
+            <LinearLayout
+                android:id="@+id/handLayout23"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal" >
+            </LinearLayout>
+        </HorizontalScrollView>
+-->
+        <HorizontalScrollView
+            android:id="@+id/handScrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:fillViewport="false"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+            <LinearLayout
+                android:id="@+id/handLayout1"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:orientation="horizontal" >
+            </LinearLayout>
+        </HorizontalScrollView>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/parameters_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:layout_marginTop="100dp"
+        android:nestedScrollingEnabled="false"
+        android:onClick="onPlayClicked"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/newgame"
+            android:id="@+id/text_panel" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_panel"
+            android:text="@string/nplayers"
+            android:id="@+id/text_nplayers" />
+        <Spinner
+            android:id="@+id/spinner_nplayers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:prompt="@string/nplayers"
+            android:entries="@array/array_nplayers"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/button"
+            android:layout_toRightOf="@+id/button" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spinner_nplayers"
+            android:text="@string/nrounds"
+            android:id="@+id/text_nrounds" />
+        <Spinner
+            android:id="@+id/spinner_nrounds"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spinner_nplayers"
+            android:layout_toEndOf="@+id/text_nrounds"
+            android:prompt="@string/nrounds"
+            android:entries="@array/array_nrounds"
+            android:layout_alignLeft="@+id/spinner_nplayers"
+            android:layout_alignStart="@+id/spinner_nplayers" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spinner_nrounds"
+            android:text="@string/ncards"
+            android:id="@+id/text_ncards" />
+        <Spinner
+            android:id="@+id/spinner_ncards"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spinner_nrounds"
+            android:layout_toEndOf="@+id/text_ncards"
+            android:prompt="@string/ncards"
+            android:entries="@array/array_ncards"
+            android:layout_alignLeft="@+id/spinner_nrounds"
+            android:layout_alignStart="@+id/spinner_nrounds" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spinner_ncards"
+            android:text="@string/level"
+            android:id="@+id/text_level" />
+        <RadioGroup
+            android:id="@+id/radio_level"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:text="@string/level"
+            android:layout_below="@+id/text_level"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true">
+            <RadioButton
+                android:id="@+id/radio_button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dumb"
+                android:checked="true"
+                />
+            <RadioButton
+                android:id="@+id/radio_button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ai"
+                />
+        </RadioGroup>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/play"
+            android:layout_below="@+id/radio_level"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/button"
+            android:onClick="onPlayClicked" />
+
+        <!--android:onClick="onPlayClicked"
+        />-->
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/progressLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#AAAAAAAA"
+        android:visibility="gone" >
+
+        <ProgressBar
+            android:id="@+id/progress_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/instructions"
+        android:background="@drawable/bg_instructions"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" >
+        <ScrollView
+            android:id="@+id/instructionsScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/instructionsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/instructionsText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/instructions_djambo"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginTop="42dp">
+                </TextView>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</RelativeLayout>

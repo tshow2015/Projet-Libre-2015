@@ -1,0 +1,15 @@
+<resources>
+    <!-- Insert your app id from the Developer Consoles -->
+    <string name="app_id">361389231394</string>
+
+    <string name="achievement_prime">CgkIoproo8IKEAIQBA</string>
+    <string name="achievement_really_bored">CgkIoproo8IKEAIQBQ</string>
+    <string name="achievement_bored">CgkIoproo8IKEAIQBg</string>
+    <string name="achievement_humble">CgkIoproo8IKEAIQBw</string>
+    <string name="achievement_arrogant">CgkIoproo8IKEAIQCA</string>
+    <string name="achievement_leet">CgkIoproo8IKEAIQCQ</string>
+
+    <string name="leaderboard_easy">CgkIoproo8IKEAIQAg</string>
+    <string name="leaderboard_hard">CgkIoproo8IKEAIQAw</string>
+
+</resources>

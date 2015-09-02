@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="instructions_a8">Instructions
+
+American 8 is a very funny game.
+The aim for each player is to get rid of all his cards before the others.
+To spice the game, some of cards have various effects.
+
+Game Development:
+1-	Each player is given the same number of cards face down (hidden from the others)
+2-	A Card from the deck is picked and put on the Playing Pile
+3-	When it’s his/her turn, a player has two choices:
+a.	Drawing a card from the deck
+b.	Playing a card
+The card chosen by the player needs to be:
+i.	Of the same suit of the card on the Playing Pile
+ii.   Of the same value of the card on the Playing Pile
+iii.  A Special Card such as a: 2, 8, or  Joker
+4-	The first player to empty its hand WINS!
+
+Cards Effect:
+Ace: 	Makes the Following player draw two (2) cards.
+2: 	Can be played over any non-special card.*
+7:	Skip the turn of the following player.
+8:	Block any attempts of force-drawing + Decide next Suit to be matched.*
+10:	Inverse the playing order.
+Joker:  Makes the Following player draw four (4) cards.*
+
+*: The card can be played regardless of the suit/value of the card on the Playing Pile
+</string>
+
+    <string name="instructions_djambo">Instructions
+
+Djambo is a very simple but tricky game.
+The winner of the game is decided at the very last turn!
+-At the beginning of the game every player is given the same number of cards and a “first player” is randomly chosen and given the “initiative” to draw a card.
+-The following players will then play a card of the same suit if they possess one and any card if they do not.
+-The next player to get the “initiative” is the one who has played the card with the highest value (of the same suit as the one played by the “initiative” player).
+-To put in perspective the importance of the “initiative”, one needs to realize that having the initiative at the last turn AND a very high value card is nearly a sure-win.
+</string>
+
+</resources>
